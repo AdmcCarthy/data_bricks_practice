@@ -105,3 +105,23 @@ for (line <- Source.fromFile(filename).getLines()) {
 package com.databricks.example
 
 case class TestKey(id: Long, str: String)
+
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC #### Datasets
+// MAGIC Data bricks comes with a series of practice datasets
+
+// COMMAND ----------
+
+display(dbutils.fs.ls("/databricks-datasets"))
+
+// COMMAND ----------
+
+// MAGIC %python
+// MAGIC with open("/dbfs/databricks-datasets/README.md") as f:
+// MAGIC     x = ''.join(f.readlines())
+// MAGIC 
+// MAGIC 
+// MAGIC print(x)
